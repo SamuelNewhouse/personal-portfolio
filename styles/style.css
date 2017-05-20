@@ -2,6 +2,7 @@ body{
   font-family: Monospace;
   text-align: center;
   background-color: #1d2e1d;
+  font-size: 14px;
 }
 div {
   align-content: center;
@@ -19,20 +20,18 @@ h3{
   padding-bottom: 5px;
 }
 p{
-  font-size: 125%;
   color: #d0d0d0;
   font-weight: bold;
-  padding-top: 7px;    
+  padding-top: 7px;  
 }
 ul{
   color: #d0d0d0;
   text-align: left;
   font-weight: bold;
-  padding-top: 7px;  
+  padding-top: 7px;
 }
 li{
-  font-size: 125%;
-  color: #d0d0d0;  
+  color: #d0d0d0;
   font-weight: bold;
 }
 .btn-primary{
@@ -70,6 +69,7 @@ li{
 }
 .bb-inner{
   border-style: none;
+  border-radius: 20px;
   background-color: #1f301f;
 }
 .portfolio-image {
