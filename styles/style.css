@@ -2,12 +2,14 @@ body{
   font-family: Monospace;
   text-align: center;
   background-color: #1d2e1d;
-  font-size: 14px;
+  font-size: 16px;
 }
 div {
   align-content: center;
   align-items: center;
 	text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 h1{
   color: #d0d0d0;
@@ -71,6 +73,7 @@ li{
   border-style: none;
   border-radius: 20px;
   background-color: #1f301f;
+  padding: 1px;
 }
 .portfolio-image {
   object-fit: contain;
