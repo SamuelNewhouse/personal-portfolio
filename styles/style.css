@@ -69,7 +69,11 @@ li{
   color: #0f0f0f;
   border-style: solid;
   border-radius: 20px;
-}  
+}
+.bb-inner{
+  border-style: none;
+  background-color: #1f301f;
+}
 .portfolio-image {
   object-fit: contain;
   width: 300px;
