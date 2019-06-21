@@ -1,3 +1,28 @@
-img {
-  max-width: 200px;
+body {
+  margin: auto;
+  max-width: 1024px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article a:first-of-type {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+#examples{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 1%;
 }
