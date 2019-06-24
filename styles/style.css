@@ -1,8 +1,12 @@
 body {
-  margin: auto;
-  max-width: 1024px;
   background: #e1e1e1;
   color: #3d2500;
+  padding: 0 2%;
+}
+
+header, section {
+  margin: auto;
+  max-width: 1024px;
 }
 
 article {
@@ -27,8 +31,32 @@ img {
   max-width: 100%;
 }
 
+ul {
+   margin-bottom: 0;
+}
+li {
+  white-space: nowrap;
+}
+li span:first-of-type {
+  display: inline-block;
+  min-width: 70px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em 1%;
+}
+
+#examples {
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  header, section {
+    max-width: 570px;
+  }
 }
