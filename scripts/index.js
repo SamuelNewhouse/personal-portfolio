@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Fox Creek Cedar Oil",
       description: "A real-world business website for a family-owned operation.",
-      gitHubName: null
+      overRideURL: "https://www.foxcreekcedaroil.com"
     },
     {
       title: "Wikipedia Quick Search",
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Random Wikiquote API",
       description: "A JavaScript API for getting a random quote from a random pages on en.wikiquote.org",
       gitHubName: "random-wikiquote",
+      sourceOnly: true
     },
     {
       title: "Random Wikiquotes",
@@ -45,31 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Responsive Diagonally Distributed Elements",
       description: "A JavaScript solution for responsively aligning elements on a diagonal line.",
       gitHubName: "responsive-diagonally-distributed-elements",
+      sourceOnly: true
     },
     {
       title: "RDDE Technical Documentation",
       description: "My explanation and documentation for Responsive Diagonally Distributed Elements.",
       gitHubName: "rdde-tech-doc",
     },
+    {
+      title: "Survey",
+      description: "A mock survey page.",
+      gitHubName: "survey",
+    },
   ];
 
-  const gitHubPageUrl = "https://samuelnewhouse.github.io/";
-  const gitHubSourceUrl = "https://github.com/SamuelNewhouse/";
   const examplesDiv = document.getElementById("examples");
+  const gitHubBasePageUrl = "https://samuelnewhouse.github.io/";
+  const gitHubBaseSourceUrl = "https://github.com/SamuelNewhouse/";
 
   for (let work of works) {
+    let gitHubFullPageUrl = gitHubBasePageUrl + work.gitHubName;
+    let gitHubFullSourceUrl = gitHubBaseSourceUrl + work.gitHubName;
+
+    let sourceElement = null;
+    if (work.gitHubName)
+      sourceElement = `<a href="${gitHubFullSourceUrl}" target="_blank">View GitHub Source</a>`;
+    else
+      sourceElement = `<span>(No GitHub Source)<span>`;
+
+    let workUrl = null;
+    if (work.sourceOnly)
+      workUrl = gitHubFullSourceUrl;
+    else
+      workUrl = work.overRideURL || gitHubFullPageUrl;
+
     examplesDiv.insertAdjacentHTML('beforeend',
-    `<article>
+      `<article>
       <h3>${work.title}</h3>
-      <a href="${gitHubPageUrl + work.gitHubName}" target="_blank">
+      <a href="${workUrl}" target="_blank">
         ${work.description}
       </a>
-      <a href="${gitHubPageUrl + work.gitHubName}" target="_blank">
+      <a href="${workUrl}" target="_blank">
         <img src="img/${work.title.replace(/\s+/g, '_').toLowerCase()}.png">
       </a>
-      <a href="${gitHubSourceUrl + work.gitHubName}" target="_blank">
-        View GitHub Source
-      </a>
+      ${sourceElement}
     </article>`);
   }
 })
