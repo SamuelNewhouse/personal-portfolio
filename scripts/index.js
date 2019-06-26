@@ -69,8 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let gitHubFullSourceUrl = gitHubBaseSourceUrl + work.gitHubName;
 
     let sourceElement = null;
-    if (work.gitHubName)
-      sourceElement = `<a href="${gitHubFullSourceUrl}" target="_blank">View GitHub Source</a>`;
+    if (work.sourceOnly)
+      sourceElement = `<span>(Click above for source)<span>`;
+    else if (work.gitHubName)
+      sourceElement = `<a class="code-info" href="${gitHubFullSourceUrl}" target="_blank">View GitHub Source</a>`;
     else
       sourceElement = `<span>(No GitHub Source)<span>`;
 
@@ -81,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       workUrl = work.overRideURL || gitHubFullPageUrl;
 
     examplesDiv.insertAdjacentHTML('beforeend',
-      `<article>
+      `<article class="dark">
       <h3>${work.title}</h3>
       <a href="${workUrl}" target="_blank">
         ${work.description}
