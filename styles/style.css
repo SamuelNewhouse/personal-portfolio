@@ -63,7 +63,7 @@ li {
 }
 li span:first-of-type {
   display: inline-block;
-  min-width: 80px;
+  min-width: 84px;
 }
 
 .grid {
@@ -71,8 +71,8 @@ li span:first-of-type {
   grid-template-columns: 1fr 1fr;
   gap: 48px 24px;
 }
-.grid.band{
-  gap: 0em .66em;
+.grid.band {
+  gap: 0 24px;
 }
 
 .dark {
