@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Responsive Diagonally Distributed Elements",
       description: 'A JavaScript solution for responsively aligning elements on a diagonal line. This is a much more comprehensive solution than manually coding ratios in flexboxes.',
+      gitHubName: "responsive-diagonally-distributed-elements",
       sourceOnly: true
     },
     {
