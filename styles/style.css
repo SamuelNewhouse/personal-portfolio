@@ -9,30 +9,45 @@ header, footer, section, h2 {
 }
 
 header, footer, h2 {
-  padding: 0 7px;
+  padding: 0 6px;
+}
+
+.dark.band, #examples article {
+  transition: background-color 0.4s ease-in-out;
+}
+.dark.band:hover, #examples article:hover {
+  background-color: #222;
 }
 
 article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3px 7px;
 }
-.dark.band, #examples article {
-  transition: background-color 0.5s ease-in-out;
+article a:first-of-type {
+  flex-grow: 100;
 }
-.dark.band:hover, #examples article:hover {
+.description {
+  margin: 24px 0 12px 0;
+}
+article > * {
+  padding: 3px 6px;
+}
+.github-element {
+  border-top: 1px solid #777;
+  margin-top: 6px;
+  padding: 6px;
   background-color: #222;
+  transition: background-color 0.4s ease-in-out;
+}
+.github-element:hover {
+  background-color: #111;
 }
 
-article a:first-of-type {
-  flex-grow: 1;
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
-article a:nth-of-type(2){
-  flex-grow: 1;
-  margin-bottom: 18px;
+.flex-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1, h3 {
@@ -52,6 +67,7 @@ a:hover {
 }
 .code-info {
   color: #68ca99;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 a.code-info:hover {
   color: #fff;
@@ -65,7 +81,7 @@ img {
 ul {
   margin-top: 6px;
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 6px;
 }
 li {
   white-space: nowrap;

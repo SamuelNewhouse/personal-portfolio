@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let sourceElement = null;
     if (work.sourceOnly)
-      sourceElement = `<span>(Click above for source)<span>`;
+      sourceElement = `<span class="github-element">(Click above for source)<span>`;
     else if (work.gitHubName)
-      sourceElement = `<a class="code-info" href="${gitHubFullSourceUrl}" target="_blank">View GitHub Source</a>`;
+      sourceElement = `<a class="github-element code-info" href="${gitHubFullSourceUrl}" target="_blank">View GitHub Source</a>`;
     else
-      sourceElement = `<span>(No GitHub Source)<span>`;
+      sourceElement = `<span class="github-element">(No GitHub Source)<span>`;
 
     let workUrl = null;
     if (work.sourceOnly)
@@ -84,11 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     examplesDiv.insertAdjacentHTML('beforeend',
       `<article class="dark">
-      <h3>${work.title}</h3>
-      <a href="${workUrl}" target="_blank">
-        ${work.description}
-      </a>
-      <a href="${workUrl}" target="_blank">
+      <a class="flex-a" href="${workUrl}" target="_blank">
+        <h3>${work.title}</h3>
+        <span class="description">${work.description}</span>
         <img src="img/${work.title.replace(/\s+/g, '_').toLowerCase()}.png">
       </a>
       ${sourceElement}
