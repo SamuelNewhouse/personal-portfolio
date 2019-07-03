@@ -39,9 +39,10 @@ article > * {
   padding: 6px;
   background-color: #222;
   transition: background-color 0.4s ease-in-out;
+  border-radius: 0 0 4px 4px;
 }
 .github-element:hover {
-  background-color: #111;
+  background-color: #1a1a1a;
 }
 
 .flex-a {
@@ -62,16 +63,14 @@ a {
   transition: color 0.4s ease-in-out;
 }
 a:hover {
-  color: #fff;
+  color: #eee;
   text-decoration: none;
 }
 .code-info {
   color: #68ca99;
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
-a.code-info:hover {
-  color: #fff;
-}
+
 
 img {
   max-width: 100%;
@@ -110,8 +109,8 @@ li span, li a {
   border: 1px solid #ccc;
   border-left: none;
   border-right: none;
-  border-radius: 4px;
   box-shadow: 0px 0px 4px #777;
+  border-radius: 4px;
 }
 .dark.band {
   margin: 24px 0;
