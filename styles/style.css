@@ -86,9 +86,13 @@ ul {
 li {
   white-space: nowrap;
 }
-li span:first-of-type {
+li i {
   display: inline-block;
-  min-width: 84px;
+  min-width: 20px;
+  text-align: center;
+}
+li span, li a {
+  padding-left: 12px;
 }
 
 .grid {
@@ -132,8 +136,11 @@ li span:first-of-type {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  #skills-list span:first-of-type {
+@media only screen and (max-width: 340px) {
+  #skills-list i {
     display: none;
+  }
+  #skills-list span {
+    padding-left: 0;
   }
 }
