@@ -9,7 +9,7 @@ header, footer, section, h2 {
 }
 
 header, footer, h2 {
-  padding: 0 6px;
+  padding: 0 18px;
 }
 
 .dark.band, #examples article {
@@ -23,6 +23,7 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 12px;
 }
 article a:first-of-type {
   flex-grow: 100;
@@ -97,10 +98,10 @@ li span, li a {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px 24px;
+  gap: 48px 0;
 }
 .grid.band {
-  gap: 0 24px;
+  gap: 0;
 }
 
 .dark {
@@ -135,7 +136,16 @@ li span, li a {
   }
 }
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 400px) {
+  header, footer, h2 {
+    padding: 0 6px;
+  }
+  article {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 355px) {
   #skills-list i {
     display: none;
   }
