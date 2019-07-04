@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <a class="flex-a" href="${workUrl}" target="_blank">
         <h3>${work.title}</h3>
         <span class="description">${work.description}</span>
-        <img src="img/${work.title.replace(/\s+/g, '_').toLowerCase()}.png">
+        <img src="img/${work.title.replace(/\s+/g, '_').toLowerCase()}.png" alt="${work.description}">
       </a>
       ${sourceElement}
     </article>`);
