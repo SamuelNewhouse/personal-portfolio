@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Wikipedia Quick Search",
-      description: "Search wikipedia and see a summary of the top 10 results. Optionally search again by any of the returned titles. Very fast, and even fun, for quickly seeing how some topics are related on Wikipedia.",
+      description: "Search wikipedia and see a summary of the top 10 results. Optionally search again by any of the returned titles. Very fast and fun for quickly seeing how some topics are related on Wikipedia.",
       gitHubName: "wikipedia-viewer"
     },
     {
