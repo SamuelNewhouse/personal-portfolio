@@ -2,16 +2,40 @@ body {
   background-color: #ddd;
   color: #333;
 }
-
 header, footer, section, h2 {
   margin: auto;
   max-width: 1024px;
 }
-
 header, footer, h2 {
   padding: 0 18px;
 }
+h1, h3 {
+  flex-grow: 100;
+  margin-bottom: 0px;
+  color: #ffc599;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 0;
+}
+.grid.band {
+  gap: 0;
+}
+.dark {
+  background-color: #333;
+  color: #ddd;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  box-shadow: 0px 0px 4px #777;
+  border-radius: 4px;
+}
+.dark.band {
+  margin: 24px 0;
+  border-radius: 0;
+}
 .dark.band, #examples article {
   transition: background-color 0.4s ease-in-out;
 }
@@ -25,15 +49,31 @@ article {
   justify-content: space-between;
   margin: 0 12px;
 }
+article > * {
+  padding: 3px 6px;
+}
 article a:first-of-type {
   flex-grow: 100;
 }
 .description {
   margin: 24px 0 12px 0;
 }
-article > * {
-  padding: 3px 6px;
+
+.flex-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+a {
+  color: #bfdeff;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out;
+}
+a:hover {
+  color: #eee;
+  text-decoration: none;
+}
+
 .github-element {
   border-top: 1px solid #777;
   margin-top: 6px;
@@ -45,33 +85,10 @@ article > * {
 .github-element:hover {
   background-color: #1a1a1a;
 }
-
-.flex-a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-h1, h3 {
-  flex-grow: 100;
-  margin-bottom: 0px;
-  color: #ffc599;
-}
-
-a {
-  color: #bfdeff;
-  text-decoration: none;
-  transition: color 0.4s ease-in-out;
-}
-a:hover {
-  color: #eee;
-  text-decoration: none;
-}
 .code-info {
   color: #68ca99;
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
-
 
 img {
   max-width: 100%;
@@ -93,29 +110,6 @@ li i {
 }
 li span, li a {
   padding-left: 12px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px 0;
-}
-.grid.band {
-  gap: 0;
-}
-
-.dark {
-  background-color: #333;
-  color: #ddd;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-right: none;
-  box-shadow: 0px 0px 4px #777;
-  border-radius: 4px;
-}
-.dark.band {
-  margin: 24px 0;
-  border-radius: 0;
 }
 
 .light {
