@@ -134,16 +134,19 @@ li span, li a {
   header, footer, h2 {
     padding: 0 6px;
   }
+  #skills-list i {
+    display: none;
+  }
+  #skills-list span {
+    padding-left: 0;
+  }
   article {
     margin: 0;
   }
 }
 
 @media only screen and (max-width: 355px) {
-  #skills-list i {
-    display: none;
-  }
-  #skills-list span {
-    padding-left: 0;
+  #skills-list {
+    font-size: 14px;
   }
 }
