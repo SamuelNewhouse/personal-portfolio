@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Random Wikiquote API",
-      description: "A JavaScript API for getting a random quote from a random pages on en.wikiquote.org. This is suprisingly difficult to do because the wikiquote API doesn't support querying for random quotes.",
+      description: "A JavaScript API for getting a random quote from a random page on en.wikiquote.org. This is suprisingly difficult to do because the wikiquote API doesn't support querying for random quotes.",
       gitHubName: "random-wikiquote",
       sourceOnly: true
     },
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Survey",
-      description: "A basic mock survey page. It was a useful excercise for learning about Bootstrap form features.",
+      description: "A basic mock survey page. It was a useful exercise for learning about Bootstrap form features.",
       gitHubName: "survey",
     },
   ];
